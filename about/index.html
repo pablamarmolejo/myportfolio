@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="assets/stylesheet.css">
 </head>
 <body>
+
+    <nav id="mySidenav" class="sidenav">
+        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="closeNav()" class="closebtn">
+            <rect width="32" height="3" rx="1.5" transform="matrix(0.707107 0.707107 0.707107 -0.707107 11 12.1211)" fill="#F4EADD"/>
+            <rect width="32" height="3" rx="1.5" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 13.1213 34.749)" fill="#F4EADD"/>
+        </svg>
+        <a href="#">Work</a>
+        <a href="#">About</a> 
+    </nav>
+
+<div id="main-page">
     <header>
         <div id="logo">
             <div class="logo-header">
@@ -31,7 +42,7 @@
                 </li>
             </ul>
             <div id="menu-open">
-                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="openNav()">
                     <rect width="32" height="3" rx="1.5" transform="matrix(1 0 0 -1 7 24)" fill="#23211E"/>
                     <rect width="32" height="3" rx="1.5" transform="matrix(1 0 0 -1 7 16)" fill="#23211E"/>
                     <rect width="21" height="3" rx="1.5" transform="matrix(1 0 0 -1 18 32)" fill="#23211E"/>
@@ -48,9 +59,9 @@
         </svg>    
     </div>
     <main>
-        <div class="heading">
-            <h1>About</h1>
-            <h2>And this is me ✨</h2>
+        <div id="heading">
+            <div class="double-title">About</div>
+            <h1>And this is me ✨</h1>
         </div>
         <div class="section-1">
             <div class="description">
@@ -115,7 +126,7 @@
         <div id="contact">
             <div class="section-1">
                 <div>
-                    <p class="shadow">Contact</p>
+                    <div class="double-title">Contact</div>
                     <h2>Contact</h2>
                     <p>We are just a few clicks away.</p>
                 </div>
@@ -163,5 +174,16 @@
             <a class="funny-link-desktop" href="">Don't click here</a>
         </div>
     </footer>
+</div>
+<script>
+    function openNav() {
+        document.getElementById("main-page").style.display = "none";
+        document.getElementById("mySidenav").style.width = "100%";
+    }
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main-page").style.display = "inherit   ";
+    }
+</script>
 </body>
 </html>
