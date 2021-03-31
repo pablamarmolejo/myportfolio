@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../assets/stylesheet.css">
 </head>
 <body>
-
     <nav id="mySidenav" class="sidenav">
         <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="closeNav()" class="closebtn">
             <rect width="32" height="3" rx="1.5" transform="matrix(0.707107 0.707107 0.707107 -0.707107 11 12.1211)" fill="#F4EADD"/>
@@ -16,8 +15,6 @@
         <a href="../work">Work</a>
         <a href="../about">About</a> 
     </nav>
-
-<div id="main-page">
     <header>
         <div id="logo">
             <div class="logo-header">
@@ -59,221 +56,227 @@
         </svg>    
     </div>
     <main id="work">
-        <div id="heading">
-            <div class="double-title">
-                <div>Case</div>
-                <div class="second-line-title">Study</div>
-            </div>
-            <div class="double-title home">Case Study</div>
-            <h1 class="project">Adecco</h1>
+        <div id="main-screen">
+            <div class="title">Adecco</div>
+            <h1>Case Study - UX Design</h1>
         </div>
-        <div id="projects">
-            <div class="description">
+        <div id="work-screen">
+            <div class="project-screen">
                 <img src="../assets/img/adecco-cover.png" />
-            </div>
-            <div class="project-intro">
-                <div class="project-title">
-                    <h2>The Project</h2>
+                <div class="project-description">
+                    <div class="project-category">TL;DR</div>
+                    <h3>The Project</h3>
+                    <p>
+                        Adecco’s registration platform failed to provide 
+                        users with enough feedback, so that the process 
+                        would be error-free. In this case study, I proposed 
+                        simple changes in user flow regarding error 
+                        prevention and feedback that could improve 
+                        the overall user experience.
+                    </p>
+                    <div class="project-details">
+                        <h3>Role</h3>
+                        <p>
+                            UX/UI Designer
+                        </p>
+                        <h3>Tools</h3>
+                        <p>
+                            Figma, Adobe Photoshop
+                        </p>
+                    </div>
                 </div>
-                <h3>TL;DR</h3>
-                <p>
-                    Adecco’s registration platform failed to provide 
-                    users with enough feedback, so that the process 
-                    would be error-free. In this case study, I proposed 
-                    simple changes in user flow regarding error 
-                    prevention and feedback that could improve 
-                    the overall user experience.
-                </p>
-                <h3>Role</h3>
-                <p>
-                    UX/UI Designer
-                </p>
-                <h3>Tools</h3>
-                <p>
-                    Figma, Adobe Photoshop
-                </p>
-            </div>
-        </div>
-        <div class="the-section">
-            <div class="wrapper">
+            </div>    
+            <div class="the-section">
                 <h3>The client</h3>
-                <p>
-                    Adecco is a human resource company that provides 
-                    temporary employment and other services such as 
-                    formation and talent development, among others.
-                </p>
-            </div>
-            <div class="wrapper">
-                <h3>The problem</h3>
-                <p>
-                    During the registration process for new 
-                    candidates, the system fails to provide 
-                    a way to revert or fix errors, or doesn't 
-                    give enought information on how to prevent 
-                    users from making them.
-                </p>
-                <h4>This is reflected in:</h4>
-                <div class="wrapper-flex">
+                <div class="text-wrapper-flex">
+                    <p>
+                        Adecco is a human resource company that provides 
+                        temporary employment and other services such as 
+                        formation and talent development, among others.
+                    </p>
+                </div>
+                <div class="wrapper">
+                    <h3>The problem</h3>
                     <div class="text-wrapper-flex">
                         <p>
-                            The user is asked to upload a CV after filling 
-                            in a form with personal information, but if the 
-                            file weights more than 5MB, not only the user 
-                            can't upload the file, but also they don't get 
-                            a second chance at uploading said file.
+                            During the registration process for new 
+                            candidates, the system fails to provide 
+                            a way to revert or fix errors, or doesn't 
+                            give enought information on how to prevent 
+                            users from making them.
                         </p>
-                        <img src="../assets/img/adecco-original-design-1.png" />
                     </div>
-                    <div class="img-wrapper-flex">
-                        <img src="../assets/img/adecco-original-design-2.png" />
-                        <p>
-                            The registration form contains too many text fields 
-                            that make the process longer than it should be. For 
-                            instance, birth data is split in three sections for 
-                            day, month, and year.
-                        </p>
+                </div>
+                <div class="wrapper">
+                    <h4>This is reflected in:</h4>
+                    <div class="wrapper-flex">
+                        <div class="text-wrapper-flex">
+                            <p>
+                                The user is asked to upload a CV after filling 
+                                in a form with personal information, but if the 
+                                file weights more than 5MB, not only the user 
+                                can't upload the file, but also they don't get 
+                                a second chance at uploading said file.
+                            </p>
+                            <img src="../assets/img/adecco-original-design-1.png" />
+                        </div>
+                        <div class="img-wrapper-flex">
+                            <img src="../assets/img/adecco-original-design-2.png" />
+                            <p>
+                                The registration form contains too many text fields 
+                                that make the process longer than it should be. For 
+                                instance, birth data is split in three sections for 
+                                day, month, and year.
+                            </p>
+                        </div>
+                    </div>    
+                    <div class="wrapper">
                         <h4>Defining project goals</h4>
-                        <p>
-                            With this redesign, it is expected to provide 
-                            the user with more information about the registration 
-                            process, so that they avoid making mistakes. 
-                            Additionally, if the user does make mistakes, 
-                            the redesign would allow them to start over or 
-                            have a chance to redo the action.
-                        </p>
-                        <p>
-                            Also, the redesign aims to make the resgitration 
-                            process more efficient and smooth.
-                        </p>
+                        <div class="text-wrapper-flex">
+                            <p>
+                                With this redesign, it is expected to provide 
+                                the user with more information about the registration 
+                                process, so that they avoid making mistakes. 
+                                Additionally, if the user does make mistakes, 
+                                the redesign would allow them to start over or 
+                                have a chance to redo the action.
+                            </p>
+                            <p>
+                                Also, the redesign aims to make the resgitration 
+                                process more efficient and smooth.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="the-section">
-            <div class="wrapper">
-                <h3>The research</h3>
-                <h4>Identifying the problems</h4>
-                <div class="wrapper-flex">
-                    <div class="text-wrapper-flex">
-                        <p>
-                            After analysing the website, there were two main 
-                            problems: Error prevention and forms.
-                        </p>
-                        <p>
-                            The main design principles from the Nielsen Norman Group that apply to this project are the following:
-                        </p>
-                        <p>
-                            No.1 Visibility of system status:
-                            It is important to tell the user what's happening during the process.
-                        </p>
-                        <p>
-                            No.3 User control and freedom:
-                            Users value being able to navigate through a system that lets them undo actions or have an "emergency exit".
-                        </p>
-                        <p>
-                            No.5 Error prevention:
-                            Design should prevent errors from happening, either by giving useful information about an action or by validating said action.
-                        </p>
-                        <p>
-                            No.9 Help users recognize, diagnose, and recover from errors:
-                            If an error occurs, inform the user about this error and suggest ways to help them solve it.
-                        </p>
-                    </div>
-                    <div class="img-wrapper-flex">
-                        <img src="../assets/img/adecco-proto-persona.png" />
-                        <img src="../assets/img/adecco-customer.png" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="the-section">
-            <h3>The redesign</h3>
-            <div class="wrapper">
-                <div class="wrapper-flex">
-                    <div class="img-wrapper-flex">
-                        <img src="../assets/img/adecco-sketch.png" />
-                    </div>
-                    <div class="text-wrapper-flex">
-                        <h4>Sketches and wireframes</h4>
-                        <p>
-                            Errors:
-                            The main focus of this redesign is to minimise errors 
-                            during the registration process. This includes error 
-                            messages, undo or skip actions, or modify information later on.
-                        </p>
-                        <p>
-                            Forms:
-                            This would include relevant information about 
-                            each step, and it would be easy to use.
-                        </p>
+            <div class="the-section">
+                <div class="wrapper">
+                    <h3>The research</h3>
+                    <h4>Identifying the problems</h4>
+                    <div class="wrapper-flex">
+                        <div class="text-wrapper-flex">
+                            <p>
+                                After analysing the website, there were two main 
+                                problems: Error prevention and forms.
+                            </p>
+                            <p>
+                                The main design principles from the Nielsen Norman Group that apply to this project are the following:
+                            </p>
+                            <p>
+                                No.1 Visibility of system status:
+                                It is important to tell the user what's happening during the process.
+                            </p>
+                            <p>
+                                No.3 User control and freedom:
+                                Users value being able to navigate through a system that lets them undo actions or have an "emergency exit".
+                            </p>
+                            <p>
+                                No.5 Error prevention:
+                                Design should prevent errors from happening, either by giving useful information about an action or by validating said action.
+                            </p>
+                            <p>
+                                No.9 Help users recognize, diagnose, and recover from errors:
+                                If an error occurs, inform the user about this error and suggest ways to help them solve it.
+                            </p>
+                        </div>
+                        <div class="img-wrapper-flex">
+                            <img src="../assets/img/adecco-proto-persona.png" />
+                            <img src="../assets/img/adecco-customer.png" />
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="wrapper">
-                <h4>Prototyping</h4>
-                <div class="wrapper-flex">
-                    <div class="text-wrapper-flex">
-                        <p>
-                            The text fields were reduced by grouping similar fields, 
-                            such as name and last name, and birth information.
-                        </p>
-                        <p>
-                            The steps or the progress bar was relocated 
-                            to a place where was easier to find.
-                        </p>
-                        <img src="../assets/img/adecco-original-design-1.png" />
-                    </div>
-                    <div class="img-wrapper-flex">
-                        <img src="../assets/img/adecco-redesign-2.png" />
+            <div class="the-section">
+                <h3>The redesign</h3>
+                <div class="wrapper">
+                    <h4>Sketches and wireframes</h4>
+                    <div class="wrapper-flex">
+                        <div class="text-wrapper-flex">
+                            <p>
+                                Errors:
+                                The main focus of this redesign is to minimise errors 
+                                during the registration process. This includes error 
+                                messages, undo or skip actions, or modify information later on.
+                            </p>
+                            <p>
+                                Forms:
+                                This would include relevant information about 
+                                each step, and it would be easy to use.
+                            </p>
+                        </div>
+                        <div class="img-wrapper-flex">
+                            <img src="../assets/img/adecco-sketch.png" />
+                        </div>
                     </div>
                 </div>
-                <div class="wrapper-flex">
-                    <div class="text-wrapper-flex">
-                        <p>
-                            Uploading the users' CV was a critical step during the registration process.
-                            The original design didn't include this as part of the process itself.
-                            In this redesign, it was added as another step, we gave information 
-                            to prevent errors, messages to inform if errors occured, and options to redo an action.
-                        </p>
-                        <img src="../assets/img/adecco-original-design-2.png" />
+                <div class="wrapper">
+                    <h4>Prototyping</h4>
+                    <div class="wrapper-flex">
+                        <div class="text-wrapper-flex">
+                            <p>
+                                The text fields were reduced by grouping similar fields, 
+                                such as name and last name, and birth information.
+                            </p>
+                            <p>
+                                The steps or the progress bar was relocated 
+                                to a place where was easier to find.
+                            </p>
+                            <img src="../assets/img/adecco-original-design-1.png" />
+                        </div>
+                        <div class="img-wrapper-flex">
+                            <img src="../assets/img/adecco-redesign-2.png" />
+                        </div>
                     </div>
-                    <div class="img-wrapper-flex">
-                        <img src="../assets/img/adecco-redesign-3.png" />
-                        <img src="../assets/img/adecco-redesign-4.png" />
+                    <div class="wrapper-flex">
+                        <div class="text-wrapper-flex">
+                            <p>
+                                Uploading the users' CV was a critical step during the registration process.
+                                The original design didn't include this as part of the process itself.
+                                In this redesign, it was added as another step, we gave information 
+                                to prevent errors, messages to inform if errors occured, and options to redo an action.
+                            </p>
+                            <img src="../assets/img/adecco-original-design-2.png" />
+                        </div>
+                        <div class="img-wrapper-flex">
+                            <img src="../assets/img/adecco-redesign-3.png" />
+                            <img src="../assets/img/adecco-redesign-4.png" />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="the-section">
-            <div class="wrapper">
-                <h3>Conclusion</h3>
-                <div class="wrapper-flex">
-                    <div class="text-wrapper-flex">
-                        <p>
-                            This redesign is a case study of how to solve 
-                            the problems that the original website presented.
-                        </p>
-                        <p>
-                            We addressed problems such as error prevention, 
-                            giving the user more context about the process. 
-                            This allowed them to know what to expect, and 
-                            know what to do when an error occured. 
-                            It was a first glance at UX research.
-                        </p>
+            <div class="the-section left">
+                <div class="wrapper">
+                    <h3>Conclusion</h3>
+                    <div class="wrapper-flex">
+                        <div class="text-wrapper-flex">
+                            <p>
+                                This redesign is a case study of how to solve 
+                                the problems that the original website presented.
+                            </p>
+                            <p>
+                                We addressed problems such as error prevention, 
+                                giving the user more context about the process. 
+                                This allowed them to know what to expect, and 
+                                know what to do when an error occured. 
+                                It was a first glance at UX research.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div id="contact">
-            <div class="section-1">
+            <h2>Contact</h2>
+            <div class="description">
+                <p>We are just a few clicks away.</p>
+            </div>
+            <div class="contact-links">
                 <div>
-                    <h2>Contact</h2>
-                    <p>We are just a few clicks away.</p>
-                </div>
-                <div class="contact-links">
                     <h3>Send me an email</h3>
                     <p>pabla.marmolejo@gmail.com</p>
                     <a href="../assets/img/cv-pabla-marmolejo.pdf">Read my cv</a>
+                </div>
+                <div>
                     <h3>Want to know more?</h3>
                     <div class="media">
                         <a href="https://www.linkedin.com/in/pabla-marmolejo/"><svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -295,9 +298,7 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <h4>Shall we begin?</h4>
-            </div>
+            <div class="final-sentence">Shall we begin?</div>
         </div>
     </main>
     <footer>
@@ -317,7 +318,6 @@
             <a class="funny-link-desktop" href="../hidden-page/">Don't click here</a>
         </div>
     </footer>
-</div>
 <script>
     function openNav() {
         document.getElementById("main-page").style.display = "none";
