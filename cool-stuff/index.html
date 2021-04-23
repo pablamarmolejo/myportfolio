@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
-    <title>Adecco - Pabla Marmolejo Porftolio UX/UI Designer</title>
-    <meta name="description" content="UX Case Study that addresses a registration site for a job application platform called Adecco.">
+    <title>Cool stuff - Pabla Marmolejo Porftolio UX/UI Designer</title>
+    <meta name="description" content="I'm Pabla Marmolejo, a UX/UI designer based in Barcelona, and this is some cool UX stuff.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Lora:wght@700&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
         </svg>
         <a href="../#work-screen">Work</a>
         <a href="../about/">About</a>
-        <a href="../cool-stuff/">???</a>
+        <a href="/cool-stuff/">???</a>
         <div class="dark-light-mode mobile">
             <div>
                 <svg class="light" width="29" height="28" viewBox="0 0 29 28" xmlns="http://www.w3.org/2000/svg">
@@ -56,10 +56,10 @@
                     <a href="../#work-screen">Work</a>
                 </li>
                 <li>
-                    <a href="../about/">About</a>
+                    <a id="about" href="../about/">About</a>
                 </li>
                 <li>
-                    <a href="../cool-stuff/">???</a>
+                    <a href="/cool-stuff/">???</a>
                 </li>
             </ul>
             <div id="menu-open">
@@ -86,216 +86,81 @@
         </div>
     </div>
     <div id="main-page">
-        <main id="work">
-            <div id="main-screen">
-                <div class="title">Adecco</div>
-                <h1>Case Study - UX Design</h1>
+        <main id="about">
+
+             <div id="main-screen">
+                <div class="title">Work in progress</div>
+                <h1>Cool stuff not found :/</h1>
+                <div class="description">
+                    <p>I'm working on something cool here, so that you too, my dear guest, can have a great user experience!</p>
+                    <img class="gif" src="../assets/img/cat-wroking.gif" />
+                </div>
             </div>
             <div id="work-screen">
-                <div class="project-screen">
-                    <img src="../assets/img/adecco-cover.png" />
+                <div class="work-description">
+                    <h2>In the meantime...</h2>
+                    <div class="description">
+                        <p>Here is a few places you might like to visit:</p>
+                        <ul class="cool-stuff-list">
+                            <li><a href="https://lawsofux.com/" rel="noreferrer">The laws of UX</a></li>
+                            <li><a href="https://neal.fun/dark-patterns/" rel="noreferrer">A list of dark patterns</a></li>
+                            <li><a href="https://driveandlisten.herokuapp.com/?utm_campaign=Digital%20Distractions%204%20%28RnPX4v%29&utm_medium=email&utm_source=Lazy%20Oaf%20Customers%20%28all%20subscribers%29&_ke=eyJrbF9jb21wYW55X2lkIjogIkhpYzZGViIsICJrbF9lbWFpbCI6ICJwYWJsYS5tYXJtb2xlam9AZ21haWwuY29tIn0%3D" rel="noreferrer">Go for a digital drive</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>    
+            <!--<div class="about-screen">
+                <div class="project-screen studies">
+                    <img src="../assets/img/profile-2-450px.png" />
                     <div class="project-description">
-                        <div class="project-category">TL;DR</div>
-                        <h3>The Project</h3>
+                        <h3>My reading list</h3>
+                        <p>What do I do when I'm not designing great user experiences? I spend my time thinking about how to design better user experiences!<br> </p>
                         <p>
-                            Adecco’s registration platform failed to provide 
-                            users with enough feedback, so that the process 
-                            would be error-free. In this case study, I proposed 
-                            simple changes in user flow regarding error 
-                            prevention and feedback that could improve 
-                            the overall user experience.
-                        </p>
-                        <div class="project-details">
-                            <h3>Role</h3>
-                            <p>
-                                UX/UI Designer
-                            </p>
-                            <h3>Tools</h3>
-                            <p>
-                                Figma, Adobe Photoshop
-                            </p>
-                        </div>
-                    </div>
-                </div>    
-                <div class="the-section">
-                    <h3>The client</h3>
-                    <div class="text-wrapper-flex">
-                        <p>
-                            Adecco is a human resource company that provides 
-                            temporary employment and other services such as 
-                            formation and talent development, among others.
+                            I like working with companies that bring innovation 
+                            to the picture, and that are not afraid to challenge 
+                            themselves. I am a creative and self-determined person, 
+                            but I am first and foremost a dreamer.
                         </p>
                     </div>
-                    <div class="wrapper">
-                        <h3>The problem</h3>
-                        <div class="text-wrapper-flex">
-                            <p>
-                                During the registration process for new 
-                                candidates, the system fails to provide 
-                                a way to revert or fix errors, or doesn't 
-                                give enought information on how to prevent 
-                                users from making them.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="wrapper">
-                        <h4>This is reflected in:</h4>
-                        <div class="wrapper-flex">
-                            <div class="text-wrapper-flex">
-                                <p>
-                                    The user is asked to upload a CV after filling 
-                                    in a form with personal information, but if the 
-                                    file weights more than 5MB, not only the user 
-                                    can't upload the file, but also they don't get 
-                                    a second chance at uploading said file.
-                                </p>
-                                <img src="../assets/img/adecco-original-design-1.png" />
-                            </div>
-                            <div class="img-wrapper-flex">
-                                <img src="../assets/img/adecco-original-design-2.png" />
-                                <p>
-                                    The registration form contains too many text fields 
-                                    that make the process longer than it should be. For 
-                                    instance, birth data is split in three sections for 
-                                    day, month, and year.
-                                </p>
-                            </div>
-                        </div>    
-                        <div class="wrapper">
-                            <h4>Defining project goals</h4>
-                            <div class="text-wrapper-flex">
-                                <p>
-                                    With this redesign, it is expected to provide 
-                                    the user with more information about the registration 
-                                    process, so that they avoid making mistakes. 
-                                    Additionally, if the user does make mistakes, 
-                                    the redesign would allow them to start over or 
-                                    have a chance to redo the action.
-                                </p>
-                                <p>
-                                    Also, the redesign aims to make the resgitration 
-                                    process more efficient and smooth.
-                                </p>
-                            </div>
-                        </div>
+                </div>
+                <div class="project-screen studies">
+                    <div class="project-description">
+                        <h3>My studies</h3>
+                        <p>
+                            Master in Digital Experience Design - BAU
+                        </p>
+                        <p>
+                            UX/UI Design Course - UXER School
+                        </p>
+                        <p>
+                            Master in Translation Studies - UPF
+                        </p>
+                        <p>
+                            Bachelor’s Degree in Translation - PUCV
+                        </p>
                     </div>
                 </div>
-                <div class="the-section">
-                    <div class="wrapper">
-                        <h3>The research</h3>
-                        <h4>Identifying the problems</h4>
-                        <div class="wrapper-flex">
-                            <div class="text-wrapper-flex">
-                                <p>
-                                    After analysing the website, there were two main 
-                                    problems: Error prevention and forms.
-                                </p>
-                                <p>
-                                    The main design principles from the Nielsen Norman Group that apply to this project are the following:
-                                </p>
-                                <p>
-                                    No.1 Visibility of system status:
-                                    It is important to tell the user what's happening during the process.
-                                </p>
-                                <p>
-                                    No.3 User control and freedom:
-                                    Users value being able to navigate through a system that lets them undo actions or have an "emergency exit".
-                                </p>
-                                <p>
-                                    No.5 Error prevention:
-                                    Design should prevent errors from happening, either by giving useful information about an action or by validating said action.
-                                </p>
-                                <p>
-                                    No.9 Help users recognize, diagnose, and recover from errors:
-                                    If an error occurs, inform the user about this error and suggest ways to help them solve it.
-                                </p>
-                            </div>
-                            <div class="img-wrapper-flex">
-                                <img src="../assets/img/adecco-proto-persona.png" />
-                                <img src="../assets/img/adecco-customer.png" />
-                            </div>
-                        </div>
+                <div class="project-screen">
+                    <img src="../assets/img/profile-2-450px.png" />
+                    <div class="project-description">
+                        <p>
+                            And now, some random facts about me:
+                        </p>
+                        <p>
+                            🇨🇱 I was born and raised in Chile.
+                        </p>
+                        <p>
+                            📍 I love languages and travelling. Since 2017, I have lived in Paris, Liège, and now Barcelona. My favourite place in the world is Vitoria, a city in the Basque Country.
+                        </p>
+                        <p>
+                            🎶 I am a Beatle fan.
+                        </p>
+                        <p class="last-line">
+                            🍰 And I am very good at baking desserts (and eating them too).
+                        </p>
                     </div>
                 </div>
-                <div class="the-section">
-                    <h3>The redesign</h3>
-                    <div class="wrapper">
-                        <h4>Sketches and wireframes</h4>
-                        <div class="wrapper-flex">
-                            <div class="text-wrapper-flex">
-                                <p>
-                                    Errors:
-                                    The main focus of this redesign is to minimise errors 
-                                    during the registration process. This includes error 
-                                    messages, undo or skip actions, or modify information later on.
-                                </p>
-                                <p>
-                                    Forms:
-                                    This would include relevant information about 
-                                    each step, and it would be easy to use.
-                                </p>
-                            </div>
-                            <div class="img-wrapper-flex">
-                                <img src="../assets/img/adecco-sketch.png" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="wrapper">
-                        <h4>Prototyping</h4>
-                        <div class="wrapper-flex">
-                            <div class="text-wrapper-flex">
-                                <p>
-                                    The text fields were reduced by grouping similar fields, 
-                                    such as name and last name, and birth information.
-                                </p>
-                                <p>
-                                    The steps or the progress bar was relocated 
-                                    to a place where was easier to find.
-                                </p>
-                                <img src="../assets/img/adecco-original-design-1.png" />
-                            </div>
-                            <div class="img-wrapper-flex">
-                                <img src="../assets/img/adecco-redesign-2.png" />
-                            </div>
-                        </div>
-                        <div class="wrapper-flex">
-                            <div class="text-wrapper-flex">
-                                <p>
-                                    Uploading the users' CV was a critical step during the registration process.
-                                    The original design didn't include this as part of the process itself.
-                                    In this redesign, it was added as another step, we gave information 
-                                    to prevent errors, messages to inform if errors occured, and options to redo an action.
-                                </p>
-                                <img src="../assets/img/adecco-original-design-2.png" />
-                            </div>
-                            <div class="img-wrapper-flex">
-                                <img src="../assets/img/adecco-redesign-3.png" />
-                                <img src="../assets/img/adecco-redesign-4.png" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="the-section left">
-                    <div class="wrapper">
-                        <h3>Conclusion</h3>
-                        <div class="wrapper-flex">
-                            <div class="text-wrapper-flex">
-                                <p>
-                                    This redesign is a case study of how to solve 
-                                    the problems that the original website presented.
-                                </p>
-                                <p>
-                                    We addressed problems such as error prevention, 
-                                    giving the user more context about the process. 
-                                    This allowed them to know what to expect, and 
-                                    know what to do when an error occured. 
-                                    It was a first glance at UX research.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </div>    -->
             <div id="contact">
                 <h2>Contact</h2>
                 <div class="description">

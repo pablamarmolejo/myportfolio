@@ -1,4 +1,4 @@
-/* ------------------------- RESET ------------------- */
+/*RESET*/
 *,
 *::before,
 *::after {
@@ -26,9 +26,9 @@ dd {
 }
 body {
   min-height: 100vh;
-  scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  transition: 0.6s ease-in;
 }
 ul,
 ol {
@@ -58,36 +58,78 @@ select {
     scroll-behavior: auto !important;
   }
 }
-/* ------------------------- RESET ------------------- */
-
-/* ----------------------- GLOBAL -------------------- */
+/*RESET*/
+/*GLOBAL*/
+/*Dark mode variables*/
+:root {
+  --background-color: #FFF5E8;
+  --main-text-color: #23211E;
+  --secondary-text-color: #7D756B;
+  --highlight-color: #b490ff;
+  --line-color: #23211E;
+}
+[data-theme="dark"] {
+  --background-color: #23211E;
+  --main-text-color: #FFF5E8;
+  --secondary-text-color: #66DEB3;
+  --highlight-color: #66DEB3;
+  --line-color: #66DEB3;
+}
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Courier Prime", monospace;
   font-weight: 400;
-  background-color: #FFF5E8;
+  background-color: var(--background-color);
+  color: var(--main-text-color);
 }
 a {
   text-decoration: none;
 }
 a:link {
-  color: #23211e;
+  color: var(--main-text-color);
 }
 a:visited {
-  color: #23211e;
+  color: var(--main-text-color);
 }
 a:hover {
-  color: #b490ff;
+  color: var(--highlight-color);
 }
 #about {
-  color: #23211e;
   text-decoration: none;
 }
 #work {
-  color: #23211e;
   text-decoration: none;
+}
+#buttonTop {
+  display: none;
+  position: fixed;
+  bottom: 120px;
+  right: 30px;
+  z-index: 99;
+  cursor: pointer;
+  background-color: var(--background-color);
+  text-decoration: none;
+  border: none;
+}
+#buttonTop path, #buttonTop circle {
+  fill: var(--highlight-color);
+  stroke: var(--background-color);
+}
+.gif {
+  padding-top: 1rem;
+  margin: auto;
+}
+.cool-stuff-list {
+  font-size: 2rem;
+  line-height: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 2rem;
+  margin-top: 2rem;
 }
 /* ----------------------- GLOBAL -------------------- */
 
@@ -96,22 +138,31 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 2.1rem 2.5rem 0rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #23211e;
+  margin: 1.1rem 2.5rem 0rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid;
+  align-items: center;
 }
 .logo-header {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   width: auto;
 }
 .logo-header svg {
   margin-right: 1rem;
 }
+.logo-header-footer path {
+  stroke: var(--main-text-color);
+}
+#logo {
+  display: flex;
+  align-items: flex-end;
+}
 #logo a {
-  color: #b490ff;
+  color: var(--highlight-color);
   font-weight: bold;
   font-size: 2.3rem;
+  padding-top: 1rem;
 }
 nav {
   font-family: "Lora", serif;
@@ -120,6 +171,9 @@ nav {
   line-height: 3.9rem;
   width: auto;
 }
+.sidenav path {
+  fill: var(--background-color);
+}
 .nav-links {
   display: none;
 }
@@ -127,7 +181,10 @@ nav {
   display: inline;
   padding-right: 0;
 }
-#dark-light-mode {
+#menu-open path {
+  stroke: var(--main-text-color);
+}
+.dark-light-mode.desktop {
   display: none;
 }
 @media (min-width: 72em) {
@@ -135,8 +192,9 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding-bottom: 0.2rem;
-    margin: 5.4rem 8rem 0rem;
+    margin: 1.5rem 8rem 0rem;
   }
   .logo-header {
     display: flex;
@@ -150,7 +208,7 @@ nav {
     font-weight: 700;
     font-size: 2.3rem;
     line-height: 2.9rem;
-    width: 180px;
+    width: 25rem;
   }
   .nav-links {
     display: flex;
@@ -165,11 +223,96 @@ nav {
   #menu-open {
     display: none;
   }
-  #dark-light-mode {
-    display: none;
+  .dark-light-mode.desktop {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .cool-stuff-list {
+    font-size: 2.3rem;
+    line-height: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 2rem;
+    margin-top: 2rem;
   }
 }
 /* ---------------------- HEADER ------------------- */
+
+/*---------------- DARK MODE ----------------*/
+/*slider switch css */
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 41px;
+}
+.theme-switch input {
+  display: none;
+}
+.slider {
+  border-radius: 34px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 3px solid var(--main-text-color);
+  -webkit-transition: .6s;
+  -moz-transition: .6s;
+  -o-transition: .6s;
+  transition: .6s;
+}
+.slider:before {
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 35px;
+  width: 35px;
+  left: 7px;
+  border: 3px solid var(--main-text-color);
+  -webkit-transition: .6s;
+  -moz-transition: .6s;
+  -o-transition: .6s;
+  transition: .6s;
+}
+input:checked + .slider:before {
+  transform: translateX(45px);
+}
+.dark-light-mode {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 2rem 8rem;
+}
+.dark-light-mode svg {
+  margin: 0 1rem;
+}
+.dark-light-mode path {
+  fill: var(--main-text-color);
+}
+.sidenav {
+  display: flex;
+  flex-direction: column;
+}
+.dark-light-mode.mobile {
+  display: flex;
+  justify-content: center;
+  padding-top: 6rem;
+}
+.dark-light-mode.mobile .slider {
+  border: 3px solid var(--background-color);
+}
+.dark-light-mode.mobile .slider:before {
+  border: 3px solid var(--background-color);
+}
+.dark-light-mode.mobile path {
+  fill: var(--background-color);
+}
+
+/*---------------- DARK MODE ----------------*/
 
 /* ---------------- MENU FOR MOBILE ---------------- */
 .sidenav {
@@ -179,7 +322,7 @@ nav {
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: #b490ff;
+  background-color: var(--highlight-color);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -190,10 +333,9 @@ nav {
   padding: 6rem 0 0;
   text-decoration: none;
   font-size: 25px;
-  color: #f4eadd;
+  color: var(--background-color);
   display: block;
   transition: 0.3s;
-
   font-size: 3.1rem;
   line-height: 3.9rem;
 }
@@ -216,10 +358,10 @@ main {
   text-align: center;
   align-items: center;  
   margin-bottom: 4rem;
-  border-bottom: 1px solid #cec5b9;
+  border-bottom: 1px solid var(--main-text-color);
 }
 .title {
-  color: #7D756B;
+  color: var(--secondary-text-color);
   font-family: "Lora", serif;
   font-weight: 700;
   font-size: 4.9rem;
@@ -232,11 +374,9 @@ h1 {
   font-weight: 700;
   font-size: 3.9rem;
   line-height: 5rem;
-  color: #23211e;
   margin-bottom: 4rem;
 }
 h2 {
-  color: #23211e;
   font-family: "Lora", serif;
   font-weight: 700;
   font-size: 4.9rem;
@@ -248,44 +388,44 @@ h2 {
 h3 {
   font-family: "Lora", serif;
   font-weight: 700;
-  color: #23211e;
   font-size: 3.2rem;
   line-height: 3.2rem;
 }
 p {
   font-size: 2rem;
   line-height: 2.2rem;
-  color: #23211e;
 }
 .description {
   text-align: center;
   max-width: 72rem;
   padding-bottom: 5rem;
 }
-.bold-text {
-  font-weight: bolder;
-  color: #b490ff;
+b {
+  color: var(--highlight-color);
 }
 .link-hidden-page {
   display: none;
   padding-bottom: 1rem;
   text-decoration: underline;
   font-size: 2rem;
-  color: #b490ff;
+  color: var(--highlight-color);
 }
 .link-hidden-page p {
   text-decoration: underline;
-  color: #b490ff;
+  color: var(--highlight-color);
 }
-#work-screen {
+#work-screen, .about-screen {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-bottom: 1px solid #cec5b9;
+  border-bottom: 1px solid;
   margin-bottom: 5rem;  
 }
 .work-description {
-  margin-bottom: 5rem;  
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .project-screen {
   display: flex;
@@ -314,20 +454,13 @@ p {
   margin-bottom: 3rem;
 }
 .project-category {
-  color: #7D756B;
+  color: var(--secondary-text-color);
   font-family: "Lora", serif;
   font-weight: 700;
   font-size: 2.5rem;
 }
 .project-details h3 {
   font-size: 3.2rem;
-}
-.about-screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-bottom: 1px solid #cec5b9;
-  margin-bottom: 5rem;
 }
 .studies {
   align-self: flex-start;  
@@ -362,7 +495,7 @@ p {
     margin: auto;
   }
   main {
-    margin: 10rem 12rem 2rem;
+    margin: 5rem 12rem 2rem;
   } 
   #main-screen {
     margin-bottom: 7rem;
@@ -377,8 +510,6 @@ p {
     line-height: 8rem;
   }
   h2 {
-    font-family: "Lora", serif;
-    font-weight: 700;
     font-size: 9rem;
     line-height: 8rem;
     margin-top: 2.3rem;
@@ -400,7 +531,7 @@ p {
     align-self: flex-end;  
   }
   .work-description {
-    margin-bottom: 14rem;  
+    margin-bottom: 9rem;  
   }
   .project-screen {
     display: flex;
@@ -477,13 +608,16 @@ p {
   justify-content: space-between;
   padding: 0 2rem;
 }
+.media path {
+  fill: var(--highlight-color);
+}
 .final-sentence {
   font-family: "Lora", serif;
   font-weight: 700;
   font-size: 3.1rem;
   line-height: 3.9rem;
   padding: 3rem 0;
-  color: #b490ff;
+  color: var(--highlight-color);
   padding: 6rem 0 3rem;
   text-align: center;
 }
@@ -497,8 +631,6 @@ p {
     text-align: left;
   }  
   #contact h3 {
-    font-family: "Lora", serif;
-    font-weight: 700;
     font-size: 3.2rem;
     line-height: 4.1rem;
   }
@@ -518,7 +650,7 @@ footer {
   display: flex;
   flex-direction: column;
   margin: 0 2.5rem 5rem;
-  border-top: 1px solid #cec5b9;
+  border-top: 1px solid;
 }
 footer #logo {
   display: flex;
@@ -529,7 +661,6 @@ footer #logo {
 }
 footer #logo a {
   padding: 3.5rem 0 0;
-  text-decoration: underline;
   font-size: 2rem;
 }
 .logo-footer {
@@ -545,15 +676,16 @@ footer #logo a {
 }
 @media (min-width: 82em) {
   footer {
-    margin: 0 2.5rem 3rem;
+    margin: 0 2.5rem;
   }
   footer #logo {
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
     padding: 0;
   }
   footer #logo a {
-    padding: 3.5rem 0 0 5rem;
+    padding: .5rem 0;
     font-size: 2.3rem;
   }
   .logo-footer {
@@ -561,7 +693,7 @@ footer #logo a {
     flex-direction: row-reverse;
   }
   .logo-footer svg {
-    margin: 2rem 5rem 0 3rem;
+    margin: 2rem 5rem 1rem 3rem;
   }
   .funny-link-mobile {
     display: none;
