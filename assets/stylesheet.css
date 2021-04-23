@@ -113,6 +113,7 @@ a:hover {
   background-color: var(--background-color);
   text-decoration: none;
   border: none;
+  outline: none;
 }
 #buttonTop path, #buttonTop circle {
   fill: var(--highlight-color);
