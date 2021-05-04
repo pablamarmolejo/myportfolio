@@ -18,6 +18,8 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+
+// Responsive menu
 function openNav() {
     document.getElementById("main-page").style.display = "none";
     document.getElementById("mySidenav").style.width = "100%";
@@ -26,6 +28,8 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main-page").style.display = "inherit";
 }
+
+// Dark mode
 const toggleSwitches = document.querySelectorAll('.theme-switch input[type="checkbox"]');
 const currentTheme = localStorage.getItem('theme');
 
@@ -44,3 +48,27 @@ function switchTheme(e) {
 }
 
 toggleSwitches.forEach(it =>it.addEventListener('change', switchTheme, false));
+
+
+//Confetti email effect
+const play = document.querySelector('#balloon');
+
+const confettiAnimation = document.getElementById('confetti');
+
+const animItem = bodymovin.loadAnimation({
+    container: 'confettiAnimation',
+    path: 'assets/img/54504-confetti.json',
+    renderer: 'svg/canvas/html',
+    animType: 'confetti',
+    loop: false,
+    autoplay: false
+});
+
+play.addEventListener('click', () => {
+    confettiAnimation.classList.remove('hide');
+    animItem.goToAndPlay(0,true);
+})
+
+animItem.addEventListener('complete', () => {
+    confettiAnimation.classList.add('hide');
+});

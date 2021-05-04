@@ -172,6 +172,9 @@ nav {
 .dark-light-mode.desktop {
   display: none;
 }
+#buttonTop {
+  display: none;
+}
 @media (min-width: 72em) {
   header {
     display: flex;
@@ -610,11 +613,13 @@ b {
   line-height: 2.2rem;
   text-decoration: underline;
   margin-top: 2rem;
+  padding-top: 1rem;
 }
 .media {
   display: flex;
   justify-content: space-evenly;
-  padding: 0 2rem;
+  padding: 2rem 2rem 0;
+  align-items: flex-end;
 }
 .media path {
   fill: var(--highlight-color);
@@ -628,6 +633,24 @@ b {
   color: var(--highlight-color);
   padding: 6rem 0 3rem;
   text-align: center;
+}
+.balloon-confetti {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+.balloon-container {
+  position: relative;
+}
+.confetti {
+  position: absolute;
+  width: 70px;
+  height: 80px;
+  pointer-events: none;
+}
+.hide {
+  display: none;
 }
 @media (min-width: 82em) {
   #contact .description {
@@ -644,11 +667,23 @@ b {
   }
   .contact-links a {
     font-size: 2.3rem;
+    padding-top: 0;
+  }
+  .media a {
+    margin-left: 4rem;
   }
   .final-sentence {
     font-size: 6.4rem;
     line-height: 8.1rem;
     padding-top: 10rem;
+  }
+  #balloon {
+    cursor: url("/assets/img/emojione-v1_black-push-pin.png"), auto;
+    padding-top: 1rem;
+  }
+  .balloon-confetti {
+    flex-direction: row;
+    padding-bottom: 0;
   }
 }
 /* ---------------------- CONTACT ------------------ */
